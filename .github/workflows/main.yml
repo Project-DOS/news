@@ -32,7 +32,7 @@ jobs:
           node-version: 16
 
       - name: Fetch XML
-      - run: curl https://decrypt.co/feed -o news.xml
+        run: curl https://decrypt.co/feed -o news.xml
 
       - name: Convert to JSON
         run: npx convert-xml-to-json ./news.xml ./news.json
