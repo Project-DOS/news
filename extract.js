@@ -1,13 +1,11 @@
 // read json file from command line arugment
 
 const fs = require('fs')
-const path = require('path')
 const {xml2json} = require('./xml2json')
 
-const filename = 'news.xml'
-const filePath = path.join(__dirname, filename)
+console.log(__dirname)
 
-fs.readFile(filePath, 'utf8', (err, data) => {
+fs.readFile('news.xml', 'utf8', (err, data) => {
   if (err) throw err
 
   data = xml2json(data)
