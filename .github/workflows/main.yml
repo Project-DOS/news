@@ -34,8 +34,8 @@ jobs:
       - name: Fetch XML
         run: curl https://decrypt.co/feed -o news.xml
 
-      - name: Convert to JSON
-        run: npx convert-xml-to-json ./news.xml ./news.json
+      - name: Extract and Convert
+        run: node ./extract.js
 
       - uses: actions/upload-pages-artifact@v1
         with:
