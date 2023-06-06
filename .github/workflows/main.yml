@@ -35,7 +35,7 @@ jobs:
         run: curl https://decrypt.co/feed -o news.xml
 
       - name: Extract and Convert
-        run: node ./extract.js
+        run: node extract.js
 
       - uses: actions/upload-pages-artifact@v1
         with:
