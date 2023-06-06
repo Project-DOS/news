@@ -35,13 +35,13 @@ jobs:
         run: curl https://decrypt.co/feed -o news.xml
 
       - name: Print
-        run: echo ~/
-
-      - name: Current directory
         run: pwd
 
+      - name: Current directory
+        run: ls
+
       - name: Extract and Convert
-        run: node ~/work/news/extract.js
+        run: node ./extract.js
 
       - uses: actions/upload-pages-artifact@v1
         with:
