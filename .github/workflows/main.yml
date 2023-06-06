@@ -34,8 +34,11 @@ jobs:
       - name: Fetch XML
         run: curl https://decrypt.co/feed -o news.xml
 
+      - name: Print
+        run: echo ~/
+
       - name: Extract and Convert
-        run: node extract.js
+        run: node /home/runner/work/news/news/extract.js
 
       - uses: actions/upload-pages-artifact@v1
         with:
