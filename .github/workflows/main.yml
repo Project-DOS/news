@@ -26,6 +26,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Sync node version and setup cache
         uses: actions/setup-node@v3
         with:
@@ -33,12 +36,6 @@ jobs:
 
       - name: Fetch XML
         run: curl https://decrypt.co/feed -o news.xml
-
-      - name: Print
-        run: pwd
-
-      - name: Current directory
-        run: ls
 
       - name: Extract and Convert
         run: node ./extract.js

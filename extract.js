@@ -3,8 +3,6 @@
 const fs = require('fs')
 const {xml2json} = require('./xml2json')
 
-console.log(__dirname)
-
 fs.readFile('news.xml', 'utf8', (err, data) => {
   if (err) throw err
 
