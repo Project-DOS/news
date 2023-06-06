@@ -37,6 +37,9 @@ jobs:
       - name: Print
         run: echo ~/
 
+      - name: Current directory
+        run: pwd
+
       - name: Extract and Convert
         run: node ~/work/news/extract.js
 
